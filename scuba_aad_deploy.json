@@ -91,7 +91,7 @@
 				"version": "1.0.0.0",
 				"type": "PowerShell",
 				"description": "Remove Assigned Roles"
-			}],
+			}]
 			"modules": [{
 					"name": "AzureRm.Compute",
 					"url": "[uri(parameters('modulesUri'),'azurerm.compute.2.8.0.nupkg')]"
