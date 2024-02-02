@@ -79,14 +79,14 @@
 				"version": "1.0.0.0",
 				"type": "PowerShell",
 				"description": "AAD Scuba provider"
-			}],
-			[{	"name": "scuba_assign_roles",
+			},
+			{	"name": "scuba_assign_roles",
 				"url": "[uri(parameters('_artifactsLocation'), 'AssignRoleComplete.ps1')]",
 				"version": "1.0.0.0",
 				"type": "PowerShell",
 				"description": "Assign Managed Identity Roles"
-			}],
-			[{	"name": "scuba_remove_roles",
+			},
+			{	"name": "scuba_remove_roles",
 				"url": "[uri(parameters('_artifactsLocation'), 'RemoveRolesComplete.ps1')]",
 				"version": "1.0.0.0",
 				"type": "PowerShell",
