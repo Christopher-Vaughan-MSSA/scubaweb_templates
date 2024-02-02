@@ -84,13 +84,13 @@
 				"url": "[uri(parameters('_artifactsLocation'), 'AssignRoleComplete.ps1')]",
 				"version": "1.0.0.0",
 				"type": "PowerShell",
-				"description": "Assign Managed Identity Roles"
+				"description": "Assign Roles"
 			},
 			{	"name": "scuba_remove_roles",
 				"url": "[uri(parameters('_artifactsLocation'), 'RemoveRolesComplete.ps1')]",
 				"version": "1.0.0.0",
 				"type": "PowerShell",
-				"description": "Remove Assigned Roles"
+				"description": "Remove Roles"
 			}]
 			"modules": [{
 					"name": "AzureRm.Compute",
@@ -227,7 +227,7 @@
 				"logProgress": false,
 				"logVerbose": true,
 				"publishContentLink": {
-					"uri": "https://raw.githubusercontent.com/Christopher-Vaughan-MSSA/scubaweb_templates/main/src/scuba_aadrunbook.ps1",
+					"uri": "https://raw.githubusercontent.com/Christopher-Vaughan-MSSA/scubaweb_templates/dev/src/scuba_aadrunbook.ps1",
 					"version": "1"
 				}
 			}
@@ -241,7 +241,7 @@
 				"[resourceId('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]"
 			],
 			"properties": {
-				"description": "AAD Scuba provider",
+				"description": "Assign Roles",
 				"runbookType": "PowerShell",
 				"logProgress": false,
 				"logVerbose": true,
@@ -260,7 +260,7 @@
 				"[resourceId('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]"
 			],
 			"properties": {
-				"description": "AAD Scuba provider",
+				"description": "Remove Roles",
 				"runbookType": "PowerShell",
 				"logProgress": false,
 				"logVerbose": true,
