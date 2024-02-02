@@ -31,7 +31,7 @@
 		},
 		"_artifactsLocation": {
 			"type": "string",
-			"defaultValue": "https://github.com/Christopher-Vaughan-MSSA/scubaweb_templates/",
+			"defaultValue": "https://github.com/Christopher-Vaughan-MSSA/scubaweb_templates/dev/",
 			"metadata": {
 				"description": "URI to artifacts location"
 			}
@@ -228,6 +228,44 @@
 				"logVerbose": true,
 				"publishContentLink": {
 					"uri": "https://raw.githubusercontent.com/Christopher-Vaughan-MSSA/scubaweb_templates/main/src/scuba_aadrunbook.ps1",
+					"version": "1"
+				}
+			}
+		},
+		{
+			"apiVersion": "2020-01-13-preview",
+			"type": "Microsoft.Automation/automationAccounts/runbooks",
+			"name": "[concat(parameters('automationAccountName'), '/','AssignRoleComplete')]",
+			"location": "[parameters('automationRegion')]",
+			"dependsOn": [
+				"[resourceId('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]"
+			],
+			"properties": {
+				"description": "AAD Scuba provider",
+				"runbookType": "PowerShell",
+				"logProgress": false,
+				"logVerbose": true,
+				"publishContentLink": {
+					"uri": "https://raw.githubusercontent.com/Christopher-Vaughan-MSSA/scubaweb_templates/dev/AssignRoleComplete.ps1",
+					"version": "1"
+				}
+			}
+		},
+		{
+			"apiVersion": "2020-01-13-preview",
+			"type": "Microsoft.Automation/automationAccounts/runbooks",
+			"name": "[concat(parameters('automationAccountName'), '/','RemoveRolesComplete')]",
+			"location": "[parameters('automationRegion')]",
+			"dependsOn": [
+				"[resourceId('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]"
+			],
+			"properties": {
+				"description": "AAD Scuba provider",
+				"runbookType": "PowerShell",
+				"logProgress": false,
+				"logVerbose": true,
+				"publishContentLink": {
+					"uri": "https://raw.githubusercontent.com/Christopher-Vaughan-MSSA/scubaweb_templates/dev/RemoveRolesComplete.ps1",
 					"version": "1"
 				}
 			}
